@@ -13,3 +13,5 @@ const isUnique = str => {
 
     return true;
 };
+
+module.exports = isUnique;

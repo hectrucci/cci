@@ -1,4 +1,4 @@
-const palindromePermutation = str => {
+const isPalindromePermutation = str => {
     const charSet = {};
     let oddCharCount = 0;
 
@@ -16,3 +16,5 @@ const palindromePermutation = str => {
 
     return oddCharCount < 2;
 };
+
+module.exports = isPalindromePermutation;

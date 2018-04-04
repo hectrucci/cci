@@ -26,3 +26,5 @@ const getCharSet = str => {
 
     return charSet;
 };
+
+module.exports = checkPermutation;
