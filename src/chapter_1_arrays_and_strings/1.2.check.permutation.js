@@ -10,8 +10,10 @@ const checkPermutation = (str1, str2) => {
                 return false;
             }
         }
+
         return true;
     }
+
     return false;
 };
 

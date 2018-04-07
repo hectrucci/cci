@@ -25,5 +25,4 @@ const URLify = (str, length) => {
     return strArr.join('');
 };
 
-
 module.exports = URLify;

@@ -1,5 +1,4 @@
 const zeroMatrix = matrix => {
-
     const zeroXY = [];
 
     matrix.forEach((row, i) => {
@@ -25,6 +24,5 @@ const setNullColumn = (matrix, column) => {
         matrix[i][column] = 0;
     });
 };
-
 
 module.exports = zeroMatrix;
