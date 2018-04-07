@@ -1,17 +1,17 @@
 const zeroMatrix = matrix => {
     const zeroXY = [];
 
-    matrix.forEach((row, i) => {
-        row.forEach((column, j) => {
-            if (matrix[i][j] === 0) {
-                zeroXY.push([i, j]);
+    matrix.forEach((row, y) => {
+        row.forEach((column, x) => {
+            if (matrix[y][x] === 0) {
+                zeroXY.push([x, y]);
             }
         });
     });
 
     zeroXY.forEach(xy => {
-        setNullRow(matrix, xy[0]);
-        setNullColumn(matrix, xy[1]);
+        setNullRow(matrix, xy[1]);
+        setNullColumn(matrix, xy[0]);
     });
 };
 
