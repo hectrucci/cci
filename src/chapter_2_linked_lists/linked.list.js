@@ -53,6 +53,34 @@ class LinkedList {
 
         return true;
     }
+
+    getFirst() {
+        return this.head;
+    }
+
+    getLast() {
+        let n = this.head;
+
+        while (n.next) {
+            n = n.next;
+        }
+
+        return n;
+    }
+
+    getItem(index) {
+        let i = 0;
+        let n = this.head;
+
+        if (index >= this.length) return null;
+
+        while (i < index && n.next) {
+            n = n.next;
+            i++;
+        }
+
+        return n;
+    }
 }
 
 class Node {
