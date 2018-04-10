@@ -12,10 +12,10 @@ describe('Return kth to last', () => {
         linkedList.add(4);
         linkedList.add(5);
 
-        const node = getKthToLast(linkedList, 2);
+        const node1 = getKthToLast(linkedList, 2);
         const node2 = getKthToLast(linkedList, 3);
 
-        expect(node.value).to.equal(4);
+        expect(node1.value).to.equal(4);
         expect(node2.value).to.equal(3);
     });
 });
