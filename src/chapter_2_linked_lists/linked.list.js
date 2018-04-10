@@ -10,8 +10,8 @@ class LinkedList {
         } else {
             this.head = new Node(value);
         }
-        this.length++;
 
+        this.length++;
         return value;
     }
 
@@ -30,6 +30,7 @@ class LinkedList {
                 this.length--;
                 return this.head;
             }
+
             n = n.next;
         }
 
@@ -46,6 +47,7 @@ class LinkedList {
             } else {
                 dups[n.value] = n.value;
             }
+
             n = n.next;
         }
 
