@@ -81,6 +81,20 @@ class LinkedList {
 
         return n;
     }
+
+    toString() {
+        let str = '';
+        let n = this.head;
+
+        while (n.next) {
+            str += `${n.value} -> `;
+            n = n.next;
+        }
+
+        str += `${n.value}`;
+
+        return str;
+    }
 }
 
 class Node {
