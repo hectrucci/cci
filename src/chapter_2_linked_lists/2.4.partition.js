@@ -1,5 +1,4 @@
 const partition = (list, partition) => {
-    let left;
     let right;
     let currLeft;
     let currRight;
@@ -8,23 +7,24 @@ const partition = (list, partition) => {
     while (node) {
         if (node.value < partition) {
             if (!currLeft) {
-                left = node;
-                currLeft = left;
+                currLeft = node;
             } else {
                 currLeft.next = node;
-                currLeft = currLeft.next;
+                currLeft = node;
             }
         } else {
             if (!currRight) {
                 right = node;
-                currRight = right;
+                currRight = node;
             } else {
                 currRight.next = node;
-                currRight = currRight.next;
+                currRight = node;
             }
         }
+
         node = node.next;
     }
+
     currRight.next = null;
     currLeft.next = right;
 };

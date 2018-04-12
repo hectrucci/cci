@@ -4,7 +4,8 @@
   "description": "Answers from Cracking the Coding Interview",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"./src/**/*.spec.js\""
+    "test": "mocha \"./src/**/*.spec.js\"",
+    "test:debug": "mocha \"./src/**/*.spec.js\" --source-maps --inspect-brk --watch"
   },
   "repository": {
     "type": "git",
