@@ -1,3 +1,5 @@
+const Node = require('./node');
+
 class LinkedList {
     constructor() {
         this.length = 0;
@@ -94,23 +96,6 @@ class LinkedList {
         str += `${n.value}`;
 
         return str;
-    }
-}
-
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-
-    appendToTail(value) {
-        let n = this;
-
-        while (n.next) {
-            n = n.next;
-        }
-
-        n.next = new Node(value);
     }
 }
 
