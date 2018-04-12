@@ -13,13 +13,13 @@ describe('Remove Dups', () => {
     });
 
     it('should have repeated items', () => {
-        expect(linkedList.length).to.equal(3);
+        expect(linkedList.getLength()).to.equal(3);
         expect(linkedList.hasUniqueValues()).to.equal(false);
     });
 
     it('should remove the dups', () => {
         removeDups(linkedList);
-        expect(linkedList.length).to.equal(2);
+        expect(linkedList.getLength()).to.equal(2);
         expect(linkedList.hasUniqueValues()).to.equal(true);
     });
 });

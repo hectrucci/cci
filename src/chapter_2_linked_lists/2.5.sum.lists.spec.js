@@ -19,7 +19,7 @@ describe('Sum Lists', () => {
         linkedList2.add(2);
     });
 
-    it('should  sum the lists', () => {
+    it('should sum the lists', () => {
         expect(sumLists(linkedList1.head, linkedList2.head).toString()).to.equal('2 -> 1 -> 9');
     });
 });

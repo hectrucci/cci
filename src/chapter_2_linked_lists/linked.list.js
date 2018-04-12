@@ -2,7 +2,6 @@ const Node = require('./node');
 
 class LinkedList {
     constructor() {
-        this.length = 0;
         this.head = null;
     }
 
@@ -13,7 +12,6 @@ class LinkedList {
             this.head = new Node(value);
         }
 
-        this.length++;
         return value;
     }
 
@@ -22,14 +20,12 @@ class LinkedList {
 
         if (n.value === value) {
             this.head = n.next;
-            this.length--;
             return this.head;
         }
 
         while (n.next) {
             if (n.next.value === value) {
                 n.next = n.next.next;
-                this.length--;
                 return this.head;
             }
 
@@ -82,6 +78,18 @@ class LinkedList {
         }
 
         return n;
+    }
+
+    getLength() {
+        let len = 0;
+        let n = this.head;
+
+        while (n) {
+            len++;
+            n = n.next;
+        }
+
+        return len;
     }
 
     toString() {
