@@ -1,32 +1,32 @@
 const partition = (list, partition) => {
     let right;
-    let currLeft;
-    let currRight;
+    let currentLeft;
+    let currentRight;
     let node = list.head;
 
     while (node) {
         if (node.value < partition) {
-            if (!currLeft) {
-                currLeft = node;
+            if (!currentLeft) {
+                currentLeft = node;
             } else {
-                currLeft.next = node;
-                currLeft = node;
+                currentLeft.next = node;
+                currentLeft = node;
             }
         } else {
-            if (!currRight) {
+            if (!currentRight) {
                 right = node;
-                currRight = node;
+                currentRight = node;
             } else {
-                currRight.next = node;
-                currRight = node;
+                currentRight.next = node;
+                currentRight = node;
             }
         }
 
         node = node.next;
     }
 
-    currRight.next = null;
-    currLeft.next = right;
+    currentRight.next = null;
+    currentLeft.next = right;
 };
 
 module.exports = partition;
