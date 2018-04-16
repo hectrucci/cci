@@ -18,6 +18,10 @@ class Node {
         this.next = next;
     }
 
+    getNext() {
+        return this.next;
+    }
+
     toString() {
         let str = '';
         let n = this;
