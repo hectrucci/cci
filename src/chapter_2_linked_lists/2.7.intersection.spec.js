@@ -3,12 +3,12 @@ const LinkedList = require('./linked.list');
 const Node = require('./node');
 const expect = require('chai').expect;
 
-describe('Sum Lists', () => {
+describe('Intersection', () => {
     let linkedList1;
     let linkedList2;
     let intersection;
 
-    it.only('should find the intersection node', () => {
+    it('should find the intersection node', () => {
         linkedList1 = new LinkedList();
         linkedList2 = new LinkedList();
         intersection = new Node(7);
@@ -29,5 +29,4 @@ describe('Sum Lists', () => {
 
         expect(getIntersection(linkedList1, linkedList2)).to.equal(intersection);
     });
-
 });

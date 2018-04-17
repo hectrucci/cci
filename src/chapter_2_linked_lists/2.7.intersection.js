@@ -32,7 +32,6 @@ const getTailAndSize = list => {
     return { tail, size };
 };
 
-
 const getKthNode = (head, k) => {
     let n = head;
 
