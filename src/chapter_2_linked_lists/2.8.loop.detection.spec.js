@@ -20,10 +20,14 @@ describe('Loop Detection', () => {
         linkedList.add(10);
         linkedList.add(11);
 
-        const loop = linkedList.getItem(3);
+        const expectedLoop = linkedList.getItem(3); // 4th item of the list
 
-        linkedList.getLast().setNext(loop);
+        linkedList.getLast().setNext(expectedLoop);
 
-        expect(findBeginningOfLoop(linkedList)).to.equal(loop);
+        const actualLoop = findBeginningOfLoop(linkedList);
+
+        expect(actualLoop).to.equal(expectedLoop);
+        expect(actualLoop).to.deep.equal(expectedLoop);
+        expect(actualLoop.value).to.equal(4);
     });
 });
