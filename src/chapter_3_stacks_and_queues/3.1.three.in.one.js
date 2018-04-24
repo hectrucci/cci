@@ -12,40 +12,40 @@ class MultiStack {
         return this._lengths[stackNum - 1];
     }
 
-    _getIndex(stackNum) {
-        let index = 0;
+    _getNumOfItems(stackNum) {
+        let items = 0;
 
         while (stackNum > 0) {
-            index += this._getLength(stackNum);
+            items += this._getLength(stackNum);
             stackNum--;
         }
 
-        return index;
+        return items;
     }
 
     pop(stackNum) {
         if (!stackNum || stackNum > this._lengths.length) return null;
 
-        const index = this._getIndex(stackNum);
+        const items = this._getNumOfItems(stackNum);
         this._lengths[stackNum - 1] = this._lengths[stackNum - 1] - 1;
 
-        return this._stack.splice(index - 1, 1)[0];
+        return this._stack.splice(items - 1, 1)[0];
     }
 
     push(stackNum, item) {
         if (!stackNum || stackNum > this._lengths.length) return null;
 
-        const index = this._getIndex(stackNum);
+        const items = this._getNumOfItems(stackNum);
 
-        this._stack.splice(index, 0, item);
+        this._stack.splice(items, 0, item);
         this._lengths[stackNum - 1] = this._lengths[stackNum - 1] + 1;
     }
 
     peek(stackNum) {
         if (!stackNum || stackNum > this._lengths.length) return null;
 
-        const index = this._getIndex(stackNum);
-        return this._stack[index - 1];
+        const items = this._getNumOfItems(stackNum);
+        return this._stack[items - 1];
     }
 
     isEmpty(stackNum) {
